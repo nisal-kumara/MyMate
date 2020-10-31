@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:contentPadding="3dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/avatarPro02"
+            android:src="@drawable/ic_smily_pro"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="9dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="9dp">
+
+            <TextView
+                android:id="@+id/namePro02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Person Name"
+                android:textSize="18sp"
+                android:textColor="@color/cardview_dark_background"/>
+
+            <TextView
+                android:id="@+id/statusPro02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/cardview_dark_background"
+                android:textStyle="bold"/>
+
+<!--            <TextView-->
+<!--                android:id="@+id/emailPro01"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Personal Email"-->
+<!--                android:textColor="@color/cardview_dark_background"/>-->
+
+        </LinearLayout>
+
+        <!--ADDED SPACER VIEW-->
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/btnAdd_F02"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/ic_message64"
+            android:layout_margin="13dp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

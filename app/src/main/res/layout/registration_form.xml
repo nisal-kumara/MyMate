@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Registration_Form">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="273dp"
+            android:background="@drawable/blue_bg">
+
+            <ImageView
+                android:layout_width="280dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="73dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/mymatelogo"/>
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="37dp"
+            android:background="@drawable/edit_text_round">
+
+            <!-- INPUT -->
+            <EditText
+                android:id="@+id/txtName"
+                android:layout_toRightOf="@+id/username_icon"
+                android:hint="Name"
+                android:textSize="17sp"
+                android:paddingLeft="17dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:maxLines="1"
+                android:inputType="text"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ICON -->
+            <ImageView
+                android:id="@+id/username_icon"
+                android:src="@drawable/ic_name_blue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGenderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <RadioButton
+                android:id="@+id/radioRegisterMale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:onClick="radioButtonGender"
+                android:text="Male"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/blueDefault"
+                android:buttonTint="@color/blueDefault"/>
+
+            <RadioButton
+                android:id="@+id/radioRegisterFemale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginLeft="50dp"
+                android:background="@android:color/transparent"
+                android:onClick="radioButtonGender"
+                android:text="Female"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/blueDefault"
+                android:buttonTint="@color/blueDefault"/>
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_text_round">
+
+            <!-- INPUT -->
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_toRightOf="@+id/email_icon"
+                android:hint="Email"
+                android:textSize="17sp"
+                android:paddingLeft="17dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:maxLines="1"
+                android:inputType="textEmailAddress"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ICON -->
+            <ImageView
+                android:id="@+id/email_icon"
+                android:src="@drawable/ic_email_blue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/edit_text_round">
+
+
+            <!-- INPUT -->
+            <EditText
+                android:id="@+id/txtPass"
+                android:layout_toRightOf="@+id/icon"
+                android:hint="Password"
+                android:textSize="17sp"
+                android:paddingLeft="17dp"
+                android:paddingTop="15dp"
+                android:maxLines="1"
+                android:inputType="textPassword"
+                android:paddingBottom="15dp"
+                android:maxLength="12"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- ICON -->
+            <ImageView
+                android:id="@+id/icon"
+                android:src="@drawable/ic_password_blue"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="17dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sign up"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:textSize="18sp"
+            android:textColor="#ffffff"
+            android:background="@drawable/gradient_btn" />
+
+
+
+    </LinearLayout>
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageStart"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:scaleType="centerCrop"-->
+<!--        android:src="@drawable/gradient"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView3"-->
+<!--        android:layout_width="280dp"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        app:srcCompat="@drawable/mymatelogo" />-->
+
+<!--    //Name textfield-->
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:id="@+id/nameTIL"-->
+<!--        android:textColorHint="#ffffff">-->
+<!--        <EditText-->
+<!--            android:id="@+id/txtName"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Name"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#ffffff"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    <RadioGroup-->
+<!--        android:id="@+id/radioGenderGroup"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/nameTIL"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:orientation="horizontal"-->
+<!--        >-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioRegisterMale"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:onClick="radioButtonGender"-->
+<!--            android:text="Male"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:buttonTint="#ffffff"/>-->
+
+<!--        <RadioButton-->
+<!--            android:id="@+id/radioRegisterFemale"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="50dp"-->
+<!--            android:layout_marginLeft="50dp"-->
+<!--            android:background="@android:color/transparent"-->
+<!--            android:onClick="radioButtonGender"-->
+<!--            android:text="Female"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#FFFFFF"-->
+<!--            android:buttonTint="#ffffff"/>-->
+
+<!--    </RadioGroup>-->
+
+
+<!--    //Email textfield-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:id="@+id/emailTIL"-->
+<!--        android:layout_below="@id/radioGenderGroup"-->
+<!--        android:textColorHint="#ffffff">-->
+<!--        <EditText-->
+<!--            android:id="@+id/txtEmail"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Email"-->
+<!--            android:inputType="textEmailAddress"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#ffffff"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    //Password textfield-->
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:id="@+id/passTIL"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:layout_below="@id/emailTIL"-->
+<!--        app:passwordToggleEnabled="true"-->
+<!--        android:textColorHint="#ffffff"-->
+<!--        >-->
+<!--        <EditText-->
+<!--            android:id="@+id/txtPass"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Password"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:backgroundTint="#FFFFFF"-->
+<!--            android:textColor="#ffffff"/>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--    // Sign up button-->
+<!--    <Button-->
+<!--        android:id="@+id/btnSignup"-->
+<!--        android:layout_width="357dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/passTIL"-->
+<!--        android:layout_marginTop="13dp"-->
+<!--        android:text="Sign Up"-->
+<!--        android:paddingHorizontal="20dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textColor="#6991c7"-->
+<!--        android:background="@drawable/gradient_btn" />-->
+
+    // "Already have an account?" textview
+    <TextView
+        android:id="@+id/txtVregistered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:layout_margin="40dp"
+        android:gravity="center_horizontal"
+        android:text="Already have an account? Sign in here"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/blueDefault"/>
+
+</RelativeLayout>
